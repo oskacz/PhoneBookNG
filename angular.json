@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "PhoneBookNG"
+  "defaultProject": "PhoneBookNG",
+  "cli": {
+    "analytics": "327dfbda-c139-4934-b046-c10bada1e8d1"
+  }
 }
