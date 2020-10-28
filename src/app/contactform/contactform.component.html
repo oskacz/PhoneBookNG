@@ -1,0 +1,65 @@
+<div class="container ">
+    <div class="row">
+        <div class="col-6">
+            <form style="margin: 20px" ngForm #f="ngForm" (ngSubmit)="AddContact()" >
+                <mat-label>
+                    <h3>Dodaj kontakt</h3>
+                </mat-label>
+                <div class="form-group ">
+                    <mat-form-field>
+                        <mat-label>Podaj imię:</mat-label>
+                        <input matInput   name="firstName"  required [(ngModel)]="newContact.firstName" >
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group ">
+                    <mat-form-field>
+                        <mat-label>Podaj nazwisko:</mat-label>
+                        <input matInput name="lastName"  required [(ngModel)]="newContact.lastName" >
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group ">
+                    <mat-form-field>
+                        <mat-label>Podaj numer telefonu:</mat-label>
+                        <input matInput name="phoneNumber"  required [(ngModel)]="newContact.phoneNumber">
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group ">
+                    <mat-form-field>
+                        <mat-label>Podaj adres zamieszkania:</mat-label>
+                        <input matInput name="adress"  required [(ngModel)]="newContact.adress">
+                    </mat-form-field>
+                </div>
+
+
+                <div class="form-group ">
+                    <mat-form-field>
+                        <mat-label>Podaj miasto:</mat-label>
+                        <input matInput name="city"  required [(ngModel)]="newContact.city">
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group ">
+                    <mat-form-field>
+                        <mat-label>Podaj kod pocztowy:</mat-label>
+                        <input matInput name="postCode"    required [(ngModel)]="newContact.postCode">
+                    </mat-form-field>
+                </div>
+
+                <div class="btn-group mr-2" role="group" aria-label="Second group" *ngIf=!newContact.id>
+                    <button mat-raised-button color="primary" type="submit" [disabled]="!f.form.valid"  >
+                        Dodaj kontakt
+                    </button>
+                </div>
+
+                <div class="btn-group mr-2" role="group" aria-label="Second group" *ngIf=newContact.id>
+                    <button mat-raised-button style="color:#fff; background-color: green;" type="button" [disabled]="!f.form.valid" (click)=(UpdateContact(newContact)) >
+                        Edytuj kontakt
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
