@@ -32,3 +32,4 @@ jobs:
       with:
         base_href: /PhoneBookNG/ 
         angular_dist_build_folder: dist/PhoneBookNG
+        github_access_token: ${{ secrets.ACCESS_TOKEN }}
