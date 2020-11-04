@@ -13,7 +13,8 @@ import { ContactformComponent } from './contactform/contactform.component';
 import {   MatFormFieldModule } from '@angular/material/form-field';
 import {  MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,8 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatButtonModule,
     MatFormFieldModule,
+    MatPaginatorModule ,
+    MatCardModule,
     MatInputModule,
     FormsModule,
   ],

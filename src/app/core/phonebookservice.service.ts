@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PhonebookserviceService {
-  url = "https://localhost:44389/"
-  // url = "https://phonebook-wwsis.azurewebsites.net/"
+  // url = "https://localhost:44389/"
+   url = "https://phonebook-wwsis.azurewebsites.net/"
   constructor(private http: HttpClient) { }
 
   contacts: Contacts;

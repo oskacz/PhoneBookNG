@@ -32,13 +32,14 @@ export class ContactsComponent implements OnInit , AfterViewInit {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
 
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
+    
   }
 
   rerender(): void {
     this.dataSource = new MatTableDataSource(this.contacts);
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 
   ngOnInit() {
