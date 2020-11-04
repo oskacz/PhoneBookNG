@@ -12,9 +12,14 @@ on:
 jobs:
   build:
 
+
     runs-on: ubuntu-latest
 
     steps:
+
+    - name: Angular Github Actions
+      uses: mayurrawte/github-angular-actions@latest
+      
     - name: Angular Deploy gh-pages Actions
       uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.1
       with:
