@@ -31,3 +31,4 @@ jobs:
       uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.1
       with:
         base_href: /PhoneBookNG/ 
+        angular_dist_build_folder: dist/PhoneBookNG
